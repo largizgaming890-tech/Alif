@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultimate Gaming Card</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+}
+
+/* 🔥 Background Animation */
+.bg-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg-shapes span {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgba(0,255,255,0.2);
+  border-radius: 50%;
+  animation: move 15s linear infinite;
+}
+
+@keyframes move {
+  0% { top: 100%; }
+  100% { top: -10%; transform: rotate(360deg); }
+}
+
+/* 💎 Card Design */
+.card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 25px;
+  max-width: 450px;
+  color: white;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 30px rgba(0,255,255,0.5),
+              0 0 60px rgba(255,0,255,0.4);
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* 👤 Profile */
+.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #0ff;
+  object-fit: cover;
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px #00f5ff; }
+  to { box-shadow: 0 0 30px #ff00ff, 0 0 50px #00ffcc; }
+}
+
+/* 🔥 Titles */
+h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 22px;
+  background: linear-gradient(90deg, #00f5ff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* 📄 Info */
+.info {
+  text-align: left;
+  margin-top: 15px;
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 10px;
+}
+
+.label {
+  color: #00f5ff;
+  font-weight: bold;
+}
+
+/* 🏫 School */
+.school {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.school img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #00f5ff;
+}
+
+/* 🪪 Card Image */
+.business-card-wrapper img,
+.flag-wrapper img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-top: 10px;
+  border: 2px solid #00f5ff;
+  box-shadow: 0 0 15px #00f5ff, 0 0 30px #ff00ff;
+}
+
+/* 🔘 Button */
+.btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #00f5ff, #ff00ff);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ff00ff;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-shapes">
+  <span style="left:10%; width:60px; height:60px;"></span>
+  <span style="left:30%; width:30px; height:30px;"></span>
+  <span style="left:50%; width:50px; height:50px;"></span>
+  <span style="left:70%; width:25px; height:25px;"></span>
+  <span style="left:85%; width:40px; height:40px;"></span>
+</div>
+
+<div class="card">
+
+  <img class="profile" src="profile.jpg">
+
+  <h1>Md Alif Hossen</h1>
+  <h2>Information Card</h2>
+
+  <div class="info">
+    <p><span class="label">Father:</span> Md Firoz Mia</p>
+    <p><span class="label">Mobile:</span> 01927458201</p>
+
+    <p><span class="label">Mother:</span> Mst Rojina Parvin</p>
+    <p><span class="label">Mobile:</span> 01735943451</p>
+
+    <p><span class="label">Sister:</span> Mst Ariya Islam</p>
+    <p><span class="label">Mobile:</span> 01984894108</p>
+
+    <p><span class="label">Family:</span> 4</p>
+    <p><span class="label">Religion:</span> Islam</p>
+    <p><span class="label">Nationality:</span> Bengali</p>
+    <p><span class="label">Blood:</span> B+</p>
+  </div>
+
+  <div class="info">
+    <p><span class="label">Address:</span> Shafipur, Kaliakoir, Gazipur, Dhaka, Bangladesh, 1751</p>
+  </div>
+
+  <h2>Studies At</h2>
+  <div class="school">
+    <img src="school.jpg">
+    <p class="label">Shafipur Ideal Public School</p>
+  </div>
+
+  <h2>My Card</h2>
+  <div class="business-card-wrapper">
+    <img src="business.png">
+  </div>
+
+  <h2>My Flag</h2>
+  <div class="flag-wrapper">
+    <img src="flag.png">
+  </div>
+
+  <button class="btn">Contact Me</button>
+
+</div>
+
+</body>
+</html>
